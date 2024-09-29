@@ -1,8 +1,15 @@
-// HTML button elements
-const button1 = document.getElementById("button1");
-const button2 = document.getElementById("button2");
+const person= {
+    name: 'Yuumi',
+    level: 100,
+    isSupport: true,
+    abilities: ['Passive','Feline Friendship', 'Prowling Projectile', 'You and Me!', 'Zoomies', 'Final Chapter']
+};
 
-//button1 click event listener to apply function
-button1.addEventListener("click", function() {
-    //your function code here
-});
+function showAbilities() {
+    const abilitiesDiv = document.getElementById("abilities");
+    abilitiesDiv.innerHTML = person.abilities.join(", ");
+}
+
+
+const abilitiesButton = document.getElementById("abilities-button");
+abilitiesButton.addEventListener("click", showAbilities);
