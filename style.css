@@ -4,6 +4,10 @@ body {
 #yuumipic {
     text-align: center;
 }
+#yuumipic img {
+    border-radius: 50px;
+}
+}
 h1 {
     text-align: center;
      font-size: 220%;
@@ -18,4 +22,8 @@ h2 {text-align: center;
         font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
         color: rgb(112, 3, 3);
     }
-    
+    #abilities-button {
+        background-color: rgb(189, 77, 217);
+        font-size: large;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
