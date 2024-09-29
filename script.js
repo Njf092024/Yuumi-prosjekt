@@ -5,11 +5,17 @@ const person= {
     abilities: ['Passive','Feline Friendship', 'Prowling Projectile', 'You and Me!', 'Zoomies', 'Final Chapter']
 };
 
-function showAbilities() {
+function showAbilities() { 
     const abilitiesDiv = document.getElementById("abilities");
-    abilitiesDiv.innerHTML = person.abilities.join(", ");
-}
-
-
+    const backgroundAudio = document.getElementById("background-audio");
+    if (abilitiesDiv.innerHTML) {
+        abilitiesDiv.innerHTML = "";
+    } else {
+      abilitiesDiv.innerHTML = person.abilities.join(", ");
+      if (backgroundAudio.paused) {
+        backgroundAudio.play();
+      }
+    }
+    }
 const abilitiesButton = document.getElementById("abilities-button");
 abilitiesButton.addEventListener("click", showAbilities);
