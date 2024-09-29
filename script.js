@@ -1,3 +1,5 @@
+let gifVisible = false;
+
 const person= {
     name: 'Yuumi',
     level: 100,
@@ -8,12 +10,18 @@ const person= {
 function showAbilities() { 
     const abilitiesDiv = document.getElementById("abilities");
     const backgroundAudio = document.getElementById("background-audio");
+    const noddingCat = document.getElementById("nodding-cat");
+
     if (abilitiesDiv.innerHTML) {
         abilitiesDiv.innerHTML = "";
     } else {
       abilitiesDiv.innerHTML = person.abilities.join(", ");
       if (backgroundAudio.paused) {
         backgroundAudio.play();
+      }
+      if (!gifVisible) {
+        noddingCat.style.display = "block";
+        gifVisible = true; 
       }
     }
     }
